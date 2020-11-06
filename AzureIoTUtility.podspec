@@ -1,7 +1,14 @@
-# Podspec files (like this one) are Ruby code
+#
+#  Be sure to run `pod spec lint AzureIoTUtility.podspec' to ensure this is a
+#  valid spec and to remove all comments including this before submitting the spec.
+#
+#  To learn more about Podspec attributes see https://guides.cocoapods.org/syntax/podspec.html
+#  To see working Podspecs in the CocoaPods repo see https://github.com/CocoaPods/Specs/
+#
 
 Pod::Spec.new do |s|
-  s.name             = 'AzureIoTUtility-Clone'
+
+  s.name         = "AzureIoTUtility"
   s.version          = '1.3.10'
   s.summary          = 'AzureIoT C-Utility library for CocoaPods.'
 
@@ -13,10 +20,12 @@ which is part of the Microsoft Azure IoT C SDK.
   s.homepage         = 'https://github.com/Azure/azure-iot-sdk-c/blob/master/doc/sdk_cocoapods.md'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Microsoft' => '' }
-  s.source           = { :git => 'https://github.com/ayershinn/azure-c-shared-utility.git'} #, :branch => 'jbobotek-test-cocoa' }#, :tag => ENV['util_ver'] }
+  s.source           = { :git => 'https://github.com/ayershinn/azure-c-shared-utility.git',
+                          :tag => '1.3.10' } #, :branch => 'jbobotek-test-cocoa' }#, :tag => ENV['util_ver'] }
 
   s.ios.deployment_target = '9.0'
   s.osx.deployment_target  = '10.10'
+
 
   # This bash command is performed after the git repo is cloned. It puts
   # some outlier header files where CocoaPods finds them convenient,
