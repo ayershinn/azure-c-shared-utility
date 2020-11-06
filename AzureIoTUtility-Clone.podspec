@@ -38,6 +38,25 @@ which is part of the Microsoft Azure IoT C SDK.
     'adapters/httpapi_compact.c',
     'adapters/threadapi_pthreads.c'
 
+  s.public_header_files = 'inc/**/*.h'#'inc/azure_c_shared_utility/*.h'
+
+  # The header_mappings_dir is a location where the header files directory structure
+  # is preserved.  If not provided the headers files are flattened.
+  s.header_mappings_dir = 'inc/'
+
+  # SWIFT_INCLUDE_PATHS tells Swift where to look for module.modulemap
+  s.xcconfig = {
+    # This is needed by all pods that depend on Protobuf:
+    "GCC_PREPROCESSOR_DEFINITIONS" => "$(inherited) GPB_USE_PROTOBUF_FRAMEWORK_IMPORTS=1",
+    # This is needed by all pods that depend on gRPC-RxLibrary:
+    "CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES" => "YES",
+    
+    'USE_HEADERMAP' => 'NO',
+    'USER_HEADER_SEARCH_PATHS' => '"${PODS_ROOT}/AzureIoTUtility-Clone/inc"',
+    'HEADER_SEARCH_PATHS' => '"${PODS_ROOT}/AzureIoTUtility-Clone/inc/"',
+    'ALWAYS_SEARCH_USER_PATHS' => 'NO'
+  }
+  
   s.dependency 'AzureMacroUtils', '1.3.9'
   s.dependency 'AzureuMockC', '1.3.9'
 
