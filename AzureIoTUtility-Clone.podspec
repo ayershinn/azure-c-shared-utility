@@ -14,7 +14,7 @@ which is part of the Microsoft Azure IoT C SDK.
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Microsoft' => '' }
   s.source           = { :git => 'https://github.com/ayershinn/azure-c-shared-utility.git', 
-                          :tag => 1.3.10 } #, :branch => 'jbobotek-test-cocoa' }#, :tag => ENV['util_ver'] }
+                          :tag => '1.3.10' } #, :branch => 'jbobotek-test-cocoa' }#, :tag => ENV['util_ver'] }
 
   s.ios.deployment_target = '9.0'
 
