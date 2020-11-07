@@ -70,7 +70,7 @@ which is part of the Microsoft Azure IoT C SDK.
     rm -f inc/azure_c_shared_utility/x509_schannel.h
     # Assemble the module.modulemap file
     pushd inc > /dev/null
-    echo "module AzureIoTUtility [system][extern_c] {" > module.modulemap
+    echo "module AzureIoTUtility-Clone [system][extern_c] {" > module.modulemap
     quote_thing='\"'
     for filename in azure_c_shared_utility/*.h; do
         echo "    header $quote_thing$filename$quote_thing" >> module.modulemap
@@ -120,8 +120,8 @@ which is part of the Microsoft Azure IoT C SDK.
     "CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES" => "YES",
     
     'USE_HEADERMAP' => 'NO',
-    'USER_HEADER_SEARCH_PATHS' => '"${PODS_ROOT}/AzureIoTUtility/inc"',
-    'HEADER_SEARCH_PATHS' => '"${PODS_ROOT}/AzureIoTUtility/inc/"',
+    'USER_HEADER_SEARCH_PATHS' => '"${PODS_ROOT}/AzureIoTUtility-Clone/inc"',
+    'HEADER_SEARCH_PATHS' => '"${PODS_ROOT}/AzureIoTUtility-Clone/inc/"',
     'ALWAYS_SEARCH_USER_PATHS' => 'NO'
   }
 
