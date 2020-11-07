@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
 
-  s.name         = "AzureIoTUtility"
+  s.name         = "AzureIoTUtility-Clone"
   s.version          = '1.3.10'
   s.summary          = 'AzureIoT C-Utility library for CocoaPods.'
 
